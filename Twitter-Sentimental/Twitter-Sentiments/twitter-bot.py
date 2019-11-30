@@ -136,8 +136,8 @@ def main():
     locations = ['india']
     api = initiate_api()
     
-    #schedule.every().day.at("00:00").do(twitter_bot, api, locations)
-    schedule.every(10).seconds.do(twitter_bot, api, locations)
+    schedule.every().day.at("00:00").do(twitter_bot, api, locations)
+    #schedule.every(10).seconds.do(twitter_bot, api, locations)
     while True:
         schedule.run_pending()
         time.sleep(1)
